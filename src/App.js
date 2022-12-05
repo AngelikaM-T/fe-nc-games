@@ -1,12 +1,16 @@
 import "./App.css";
+import Reviews from './components/Reviews'
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>GAMES</h1>
-      </header>
-    </div>
+   <main className="App">
+    <Header />
+    <Routes>
+      <Route path='/' element={<Reviews />}/>
+    </Routes>
+   </main>
   );
 }
 
