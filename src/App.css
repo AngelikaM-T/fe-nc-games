@@ -1,30 +1,51 @@
-@media all and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
+  /* For mobile phones */
   header {
     background: url(https://www.bark.us/wp-content/uploads/2019/12/UltimateGuideGamingParentalControls_Header.png);
+    background-repeat: no-repeat;
     text-align: center;
     display: flex;
-    background-size: 412px 181px;
+    background-size: 100% 140%;
     font-family: "Press Start 2P", cursive;
     font-size: 22px;
     color: whitesmoke;
     text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+    justify-content: space-around;
   }
 
-  .reviews {
-    list-style-type: none;
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 36px;
   }
+
+  .card-grid {
+    list-style-type: none;
+    display: grid;
+    align-items: center;
+    margin-top: -108px;
+    margin-right: -56px;
+    padding: 162px;
+  }
+
   .reviews--image {
     width: 100%;
     height: 17em;
   }
 
-  .reviews--cards {
+  .reviews--card {
     border: 2px solid black;
-    text-align: center;
-    width: 89%;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 41px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.35rem;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 150ms;
+    transform: perspective(1000px) rotateY(var(rotate-y, 0))
+      translateY(var(--translate-y, 0));
   }
 
   .review--page {
@@ -36,4 +57,76 @@
   .review--image {
     width: 50%;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop */
+  header {
+    background: url(https://www.bark.us/wp-content/uploads/2019/12/UltimateGuideGamingParentalControls_Header.png);
+    text-align: center;
+    display: flex;
+    background-size: 100% 140%;
+    padding-bottom: 50px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 22px;
+    color: whitesmoke;
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 6px;
+    margin-top: 48px;
+  }
+
+  .card-grid {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 7%;
+    justify-content: center;
+    margin: 2% 18% 0 4%;
+  }
+
+  .reviews--image {
+    width: 100%;
+    height: 60%;
+  }
+
+  .reviews--title {
+    font-size: 12px;
+    color: black;
+  }
+
+  .reviews--card {
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    width: 177px;
+    height: 217px;
+    margin-bottom: -20%;
+  }
+
+  .review--page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review--image {
+    width: 50%;
+  }
+}
+
+.reviews--votes {
+  font-size: 10px;
+  margin: 0;
+}
+
+.reviews--comments {
+  font-size: 10px;
+  margin: 0;
 }

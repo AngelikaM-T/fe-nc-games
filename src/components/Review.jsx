@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { getReviewById } from "../util/api";
+import Comments from "../components/Comments"
 
 const Review = () => {
   const [review, setReview] = useState({});
@@ -29,6 +30,7 @@ const Review = () => {
         <p className="review--designer">Designer: {review.designer}</p>
         <p className="review--owner">Owner: {review.owner}</p>
         <p className="review--reviews">Review: {review.review_body}</p>
+        <Comments />
       </main>
     );
   } else {
