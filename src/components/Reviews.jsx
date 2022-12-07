@@ -17,18 +17,22 @@ const Reviews = () => {
   return loading ? (
     <p>page is loading...</p>
   ) : (
-    <ul className="reviews">
+    <ul className="card-grid">
       {reviews.map((review) => {
         return (
-          <li className="reviews--cards" key={review.review_id}>
+          <li className="reviews--card" key={review.review_id}>
             <Link to={`/reviews/${review.review_id}`} key={review.review_id}>
-              <h2>{review.title}</h2>
-              <img
-                className="reviews--image"
-                src={review.review_img_url}
-                alt={review.title}
-              />
+              <h2 className="reviews--title">{review.title}</h2>
             </Link>
+            <img
+              className="reviews--image"
+              src={review.review_img_url}
+              alt={review.title}
+            />
+            <p className="reviews--votes">Likes: {review.votes}</p>
+            <p className="reviews--comments">
+              Comments: {review.comment_count}
+            </p>
           </li>
         );
       })}
