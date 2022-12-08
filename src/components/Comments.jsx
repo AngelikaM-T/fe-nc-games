@@ -15,22 +15,21 @@ const Comments = () => {
     });
   }, [review_id]);
 
-  return loading ? (
-    <p>page is loading...</p>
-  ) : (
-    <ul className="Comments">
-      <h2>Comments</h2>
-      {comments.map((comment) => {
-        return (
-          <li className="comments--single-comment" key={comment.comment_id}>
-            <p>
-              {comment.author}: {comment.body}
-            </p>
-          </li>
-        );
-      })}
-    </ul>
-  );
+ return loading ? (
+  <p>page is loading...</p>
+ ) : (
+  <ul className="Comments">
+    <h2>Comments</h2>
+    {comments.map((comment) => {
+      return (
+        <li className="comments--single-comment" key={comment.comment_id}>
+          <p>{comment.author}: {comment.body}</p>
+        </li>
+      )
+    })}
+
+  </ul>
+ )
 };
 
 export default Comments;

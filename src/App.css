@@ -1,132 +1,170 @@
-@media only screen and (max-width: 768px) {
-  /* For mobile phones */
-  header {
-    background: url(https://www.bark.us/wp-content/uploads/2019/12/UltimateGuideGamingParentalControls_Header.png);
-    background-repeat: no-repeat;
-    text-align: center;
-    display: flex;
-    background-size: 100% 140%;
-    font-family: "Press Start 2P", cursive;
-    font-size: 22px;
-    color: whitesmoke;
-    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
-    justify-content: space-around;
-  }
-
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 36px;
-  }
-
-  .card-grid {
-    list-style-type: none;
-    display: grid;
-    align-items: center;
-    margin-top: -108px;
-    margin-right: -56px;
-    padding: 162px;
-  }
-
-  .reviews--image {
-    width: 100%;
-    height: 17em;
-  }
-
-  .reviews--card {
-    border: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0.35rem;
-    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: 150ms;
-    transform: perspective(1000px) rotateY(var(rotate-y, 0))
-      translateY(var(--translate-y, 0));
-  }
-
-  .review--page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .review--image {
-    width: 50%;
-  }
+header {
+  background: url(https://www.bark.us/wp-content/uploads/2019/12/UltimateGuideGamingParentalControls_Header.png);
+  text-align: center;
+  display: flex;
+  background-size: 100% 140%;
+  padding-bottom: 50px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 22px;
+  color: whitesmoke;
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  justify-content: center;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop */
-  header {
-    background: url(https://www.bark.us/wp-content/uploads/2019/12/UltimateGuideGamingParentalControls_Header.png);
-    text-align: center;
-    display: flex;
-    background-size: 100% 140%;
-    padding-bottom: 50px;
-    font-family: "Press Start 2P", cursive;
-    font-size: 22px;
-    color: whitesmoke;
-    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 6px;
-    margin-top: 48px;
-  }
-
-  .card-grid {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(4, 20%);
-    gap: 7%;
-    justify-content: center;
-    margin: 2% 18% 0 4%;
-  }
-
-  .reviews--image {
-    width: 100%;
-    height: 60%;
-  }
-
-  .reviews--title {
-    font-size: 12px;
-    color: black;
-  }
-
-  .reviews--card {
-    border: 2px solid black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px;
-    width: 177px;
-    height: 217px;
-    margin-bottom: -20%;
-  }
-
-  .review--page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .review--image {
-    width: 50%;
-  }
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 6px;
+  margin-top: 48px;
+}
+.card-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 28px 23px 16px;
 }
 
-.reviews--votes {
+.reviews--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 15px 60px 50px 60px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px #282c34;
+  color: black;
+  border-radius: 40px;
+  box-sizing: content-box;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 275px;
+  min-height: 275px;
+}
+
+.reviews--image {
+  min-width: 260px;
+  max-width: 260px;
+  min-height: 175px;
+  max-height: 175px;
+  border: 2px solid blue;
+  border-radius: 25px;
+  margin-bottom: 0px;
+}
+
+.reviews--title {
+  font-size: 12px;
+  color: black;
+}
+
+.review--page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review--image {
+  width: 50%;
+}
+
+.reviews--likes-comments {
   font-size: 10px;
-  margin: 0;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 2px;
+  margin-left: 80px;
+  margin-right: -110px;
+  margin-bottom: 0px;
 }
 
-.reviews--comments {
-  font-size: 10px;
-  margin: 0;
+.review--likes {
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-left: 250px;
+  margin-right: -130px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#vote {
+  font-size: 14px;
+  box-shadow: 0px 0px 5px#babfca;
+  padding: 12px;
+  margin: 1px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#vote-up {
+  background-color: transparent;
+  border: none;
+}
+
+#vote-up:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px#babfca;
+  border-radius: 30px;
+}
+
+#vote-down {
+  background-color: transparent;
+  border: none;
+}
+
+#vote-down:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px#babfca;
+  border-radius: 30px;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  padding-bottom: 1px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 35px;
+  height: 34px;
+}
+
+.users-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 28px 23px 16px;
+}
+
+.users--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 15px 60px 50px 60px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px #282c34;
+  color: black;
+  border-radius: 40px;
+  box-sizing: content-box;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 275px;
+  min-height: 275px;
+}
+
+.users--avatar {
+  min-width: 260px;
+  max-width: 260px;
+  min-height: 175px;
+  max-height: 175px;
+  border-radius: 25px;
+  margin-bottom: 0px;
 }
