@@ -21,3 +21,15 @@ export const getCommentById = (review_id) => {
     return data.comments;
   });
 };
+
+export const patchVotes = (article_id) => {
+  return gamesApi.patch(`/reviews/${article_id}`, { inc_votes: 1 }).then(({data}) => {
+      return data.review.votes
+    });
+};
+
+export const getUsers = () => {
+  return gamesApi.get("/users").then(({data}) => {
+  return data.users
+})
+}
