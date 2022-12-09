@@ -8,15 +8,15 @@ import UserControls from "./components/UserControls";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import { UserContext } from "./context/UserContext";
+import ReviewsByCategories from "./components/ReviewsByCategories";
 import ErrorComponent from "./components/ErrorPage";
 
 function App() {
   const [activeUser, setActiveUser] = useState({});
 
   return (
-    
-      <main className="App">
-        <UserContext.Provider value={{ activeUser, setActiveUser }}>
+    <main className="App">
+      <UserContext.Provider value={{ activeUser, setActiveUser }}>
         <Header />
         <NavBar />
         <Routes>
@@ -24,11 +24,14 @@ function App() {
           <Route path="/reviews/:review_id" element={<Review />} />
           <Route path="/reviews/:review_id/comments" element={<Comment />} />
           <Route path="/signin" element={<UserControls />} />
+          <Route
+            path="/categories/:category"
+            element={<ReviewsByCategories />}
+          ></Route>
           <Route path="*" element={ErrorComponent} />
         </Routes>
-        </UserContext.Provider>
-      </main>
-   
+      </UserContext.Provider>
+    </main>
   );
 }
 

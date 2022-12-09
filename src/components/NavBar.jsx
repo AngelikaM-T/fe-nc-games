@@ -6,6 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { UserContext } from "../context/UserContext";
 
 const NavBar = () => {
+
   const { activeUser } = useContext(UserContext);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -15,19 +16,19 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Categories" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/">Strategy</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/strategy">Strategy</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Hidden-Roles</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/hidden-roles">Hidden-Roles</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Dexterity</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/dexterity">Dexterity</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Push-Your-Luck</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/push-your-luck">Push-Your-Luck</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Roll-And-Write</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/roll-and-write">Roll-And-Write</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Deck-Building</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/deck-building">Deck-Building</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Engine-Building</NavDropdown.Item>
+              <NavDropdown.Item href="/categories/enginge-building">Engine-Building</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
