@@ -9,6 +9,7 @@ import { useState } from "react";
 import NavBar from "./components/NavBar";
 import { UserContext } from "./context/UserContext";
 import ReviewsByCategories from "./components/ReviewsByCategories";
+import ErrorComponent from "./components/ErrorPage";
 
 function App() {
   const [activeUser, setActiveUser] = useState({});
@@ -27,6 +28,7 @@ function App() {
             path="/categories/:category"
             element={<ReviewsByCategories />}
           ></Route>
+          <Route path="*" element={ErrorComponent} />
         </Routes>
       </UserContext.Provider>
     </main>
