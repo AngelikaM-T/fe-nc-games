@@ -23,7 +23,7 @@ function ReviewsByCategories() {
       {reviews.map((review) => {
         return (
           <Link to={`/reviews/${review.review_id}`} key={review.review_id} style={{ textDecoration: 'none' }}>
-            <li className="reviews--card" key={review.review_id}>
+            <li className="category-reviews--card" key={review.review_id}>
               <h2 className="reviews--title">{review.title}</h2>
 
               <img
