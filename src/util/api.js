@@ -47,3 +47,9 @@ export const postComment = (review_id, body, username) => {
       return data.comment
     });
 };
+
+export const getReviewsByCategory = (category) => {
+  return gamesApi.get(`/reviews?category=${category}`).then(({data}) => {
+    return data
+  })
+}
