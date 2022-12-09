@@ -8,6 +8,7 @@ import UserControls from "./components/UserControls";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import { UserContext } from "./context/UserContext";
+import ErrorComponent from "./components/ErrorPage";
 
 function App() {
   const [activeUser, setActiveUser] = useState({});
@@ -23,6 +24,7 @@ function App() {
           <Route path="/reviews/:review_id" element={<Review />} />
           <Route path="/reviews/:review_id/comments" element={<Comment />} />
           <Route path="/signin" element={<UserControls />} />
+          <Route path="*" element={ErrorComponent} />
         </Routes>
         </UserContext.Provider>
       </main>
