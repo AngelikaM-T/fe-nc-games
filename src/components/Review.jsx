@@ -55,7 +55,7 @@ const Review = () => {
         <p className="review--designer">Designer: {review.designer}</p>
         <p className="review--owner">Owner: {review.owner}</p>
         <p className="review--reviews">Review: {review.review_body}</p>
-        <Comments />
+        <Comments user_id="1"/>
       </main>
     );
   } else {

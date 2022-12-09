@@ -23,13 +23,27 @@ export const getCommentById = (review_id) => {
 };
 
 export const patchVotes = (review_id) => {
-  return gamesApi.patch(`/reviews/${review_id}`, { inc_votes: 1 }).then(({data}) => {
-      return data.review.votes
+  return gamesApi
+    .patch(`/reviews/${review_id}`, { inc_votes: 1 })
+    .then(({ data }) => {
+      return data.review.votes;
     });
 };
 
 export const getUsers = () => {
-  return gamesApi.get("/users").then(({data}) => {
-  return data.users
-})
-}
+  return gamesApi.get("/users").then(({ data }) => {
+    return data.users;
+  });
+};
+
+export const postComment = (review_id, body, username) => {
+  const postBody = {
+    username: "tickle122",
+    body: body,
+  };
+  return gamesApi
+    .post(`/reviews/${review_id}/comments`, postBody)
+    .then(({ data }) => {
+      return data.comment
+    });
+};

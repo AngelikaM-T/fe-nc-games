@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { UserContext } from "../context/UserContext";
 
-const NavBar = ({ activeUser, setActiveUser }) => {
+const NavBar = () => {
+  const { activeUser } = useContext(UserContext);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -29,7 +32,6 @@ const NavBar = ({ activeUser, setActiveUser }) => {
           </Nav>
           <Nav>
             <Nav.Link href="/signin">Sign In</Nav.Link>
-            <button onClick={() => setActiveUser({})}>Sign Out</button>
             <img
               className="user-avatar"
               src={activeUser.avatar_url}
